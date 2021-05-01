@@ -1,7 +1,7 @@
 var i = document.querySelector(".btn1");
 var j = document.querySelector(".btn2");
 j.style.visibility = "hidden";
-j.addEventListener("click",function() {open("index2.html")})
+j.addEventListener("click",function() {open("index2.html","_parent")})
 var a = 0;
 i.addEventListener("click", function () {
   if (a === 0) {
