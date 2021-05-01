@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: "Zen Dots";
+    /* outline: 1px solid white; */
+}
+body {
+    background-color: rgb(5, 6, 71);
+}
+/* head */
+h1 {
+    color: white;
+    font-size: 4rem;
+    position: relative;
+    top: 30px;
+    text-shadow: -2px 2px 2px rgb(50, 50, 250);
+
+}
+.logo {
+    width: 100px;
+    box-shadow: -5px 5px 10px rgb(50, 50, 250);
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+.logo:hover {
+    box-shadow: none;
+    cursor: pointer;
+}
+@media (max-width: 800px) {
+    .logo {
+        display: none;
+    }
+    .col-lg-6 {
+        margin-bottom: 20px;
+    }
+}
+/* Body */
+.HorT {
+    margin: 0;
+    margin-top: 100px;
+}
+.content {
+    color: white;
+}
