@@ -9,7 +9,7 @@
 body {
     background-color: rgb(5, 6, 71);
 }
-/* head */
+/* head (common for all pages) */
 h1 {
     color: white;
     font-size: 4rem;
@@ -37,6 +37,7 @@ h1 {
         margin-bottom: 20px;
     }
 }
+/* for index.html */
 /* Body */
 .HorT {
     margin: 0;
@@ -46,7 +47,7 @@ h1 {
     margin-bottom: 20px;
 }
 .BorB {
-    margin: 0;
+    margin: 0;      /*to remove horizontal scrolling*/
     display: none;
 }
 .content {

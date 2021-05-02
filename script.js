@@ -1,6 +1,7 @@
 var tossOver = 0;
 var toss;
 var bOrB;
+document.querySelector(".continue").addEventListener("click",function() {open("./index2.html","_parent")});
 document.querySelector(".heads").addEventListener("click", function () {
   if (tossOver === 0) {
     toss = 1;
