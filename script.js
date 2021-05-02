@@ -3,15 +3,17 @@ var toss;
 document.querySelector(".heads").addEventListener("click", function () {
   if (tossOver === 0) {
     toss = 1;
-    tossDisplay();
     tossOver = 1;
+    tossDisplay();
+    alert("Hello");
   } else alert("Can only be tossed once");
 });
 document.querySelector(".tails").addEventListener("click", function () {
   if (tossOver === 0) {
     toss = 0;
-    tossDisplay();
     tossOver = 1;
+    tossDisplay();
+    alert("Hello");
   } else alert("Can only be tossed once");
 });
 function tossDisplay() {
@@ -24,4 +26,5 @@ function tossDisplay() {
     document.querySelector(".content").innerHTML = "You Lost The Toss";
     tossResult();
   }
+  return;
 }
