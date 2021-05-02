@@ -1,5 +1,6 @@
 var tossOver = 0;
 var toss;
+var bOrB;
 document.querySelector(".heads").addEventListener("click", function () {
   if (tossOver === 0) {
     toss = 1;
@@ -16,19 +17,19 @@ document.querySelector(".tails").addEventListener("click", function () {
 });
 function tossDisplay() {
   var i = Math.round(Math.random());
-  if(i === toss)  {
+  if (i === toss) {
     document.querySelector(".content").innerHTML = "You Won The Toss";
     document.querySelector(".BorB").style.display = "flex";
-  }
-  else {
+  } else {
     document.querySelector(".content").innerHTML = "You Lost The Toss";
-    tossResult();
+    document.querySelector(".LRcontent").innerHTML = "Computer has chose to " + lRContent();
+    document.querySelector(".lostResult").style.display = "block";
   }
   return;
 }
-function optionsDisplay() {
-  return;
-}
-function tossResult() {
-  return;
+function lRContent() {
+  bOrB = Math.round(Math.random());
+  if (bOrB === 0) {
+    return "bowl";
+  } else return "bat";
 }
