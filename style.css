@@ -4,6 +4,7 @@
     padding: 0;
     text-align: center;
     font-family: "Zen Dots";
+    color: white;
     /* outline: 1px solid white; */
 }
 body {
@@ -59,4 +60,46 @@ h1 {
 }
 .LRcontent {
     color: white;
+}
+
+
+
+
+/* index2.html */
+.numbers {
+    margin-top: 50px;
+}
+.numbers a, .one {
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    padding: 5px;
+    display: inline-block;
+    text-align: center;
+}
+.numbers a:hover, .one:hover{
+    background-color: white;
+    color:rgb(5, 6, 71);
+}
+@media (max-width: 800px) {
+    .numbers a , .one{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .secondhalf {
+        display: inline-block;
+        margin-top: 30px;
+    }
+}
+.yourscore, .opponentscore{
+    display: inline-block;
+    outline: 1px solid white;
+    height: 100px;
+    width: 100px;
+    /* padding: 5px; */
+    color: white;
+}
+.yourscore img , .opponentscore img{
+    height: 100px;
+    width: 100px;
 }

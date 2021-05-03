@@ -2,20 +2,21 @@ var isTossOver = 0; //to determine whether toss is over or not (if 0 toss not do
 var clickedHeadsOrTails; //to get what user has clicked (1 for heads 0 for tails)
 var computersChoiceBatOrBowl; //if toss is lost by user then what is the choice of the computer (bat or bowl)
 document.querySelector(".heads").addEventListener("click", function () {
-  if (isTossOver === 0) {
-    clickedHeadsOrTails = 1;
-    isTossOver = 1;
-    tossResultDisplay();
-  } else alert("Can only be tossed once");
+  clickedHeadsOrTails = 1;
+  tossDisplay();
 });
 document.querySelector(".tails").addEventListener("click", function () {
+  clickedHeadsOrTails = 0;
+  tossDisplay();
+});
+function tossDisplay() {
   if (isTossOver === 0) {
-    clickedHeadsOrTails = 0;
     isTossOver = 1;
     tossResultDisplay();
   } else alert("Can only be tossed once");
-});
-function tossResultDisplay() {  //function to display the result of the toss
+}
+function tossResultDisplay() {
+  //function to display the result of the toss
   var tossResult = Math.round(Math.random());
   if (tossResult === clickedHeadsOrTails) {
     document.querySelector(".content").innerHTML = "You Won The Toss";
@@ -28,9 +29,14 @@ function tossResultDisplay() {  //function to display the result of the toss
   }
   return;
 }
-function lostResultContent() { //function to display computer's choice (bat or bowl)
+function lostResultContent() {
+  //function to display computer's choice (bat or bowl)
   computersChoiceBatOrBowl = Math.round(Math.random());
   if (computersChoiceBatOrBowl === 0) {
     return "bowl";
   } else return "bat";
 }
+document.querySelector(".continue").addEventListener("click",function() {
+  open("./index2.html","_parent");
+})
+// end of toss section
