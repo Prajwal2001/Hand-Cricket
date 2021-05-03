@@ -1,7 +1,5 @@
-var x = localStorage.getItem("tossResult");
-var a = localStorage.getItem("x");
-// alert(a);
 var score = 0;
+showScore();
 var computerValue = null;
 document.querySelector(".one").addEventListener("click", function () {
   document.querySelector(".yourscore").innerHTML =

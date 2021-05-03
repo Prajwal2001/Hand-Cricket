@@ -10,7 +10,6 @@
 body {
     background-color: rgb(5, 6, 71);
 }
-/* head (common for all pages) */
 h1 {
     color: white;
     font-size: 4rem;
@@ -64,8 +63,10 @@ h1 {
 
 
 
-
-/* index2.html */
+/* firstbat */
+.firstbat {
+    display: none;
+}
 .numbers {
     margin-top: 50px;
 }
@@ -132,5 +133,13 @@ h1 {
     display: none;
 }
 #nextinningscontinue {
+    display: none;
+}
+
+
+
+/* first bowl */
+.firstbowl {
+    margin-top: 50px;
     display: none;
 }
