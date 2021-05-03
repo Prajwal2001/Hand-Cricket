@@ -47,18 +47,18 @@ function lostResultContent() {
 }
 document.querySelector(".continue").addEventListener("click", function () {
   if (firstBatting === 1)
-    document.querySelector(".firstbat").style.display = "block";
-  else document.querySelector(".firstbowl").style.display = "block";
+    document.querySelector(".batting").style.display = "block";
+  else document.querySelector(".bowling").style.display = "block";
   document.querySelector(".toss").style.display = "none";
 });
 document.querySelector(".bat").addEventListener("click",function() {
   firstBatting = 1;
-  document.querySelector(".firstbat").style.display = "block";
+  document.querySelector(".batting").style.display = "block";
   document.querySelector(".toss").style.display = "none";
 });
 document.querySelector(".bowl").addEventListener("click",function() {
   firstBatting = 0;
-  document.querySelector(".firstbowl").style.display = "block";
+  document.querySelector(".bowling").style.display = "block";
   document.querySelector(".toss").style.display = "none";
 });
 

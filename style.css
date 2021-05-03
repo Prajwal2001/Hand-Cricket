@@ -63,8 +63,8 @@ h1 {
 
 
 
-/* firstbat */
-.firstbat {
+/* batting */
+.batting {
     display: none;
 }
 .numbers {
@@ -139,7 +139,7 @@ h1 {
 
 
 /* first bowl */
-.firstbowl {
+.bowling {
     margin-top: 50px;
     display: none;
 }
