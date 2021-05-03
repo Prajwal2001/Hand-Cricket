@@ -40,5 +40,7 @@ function lostResultContent() {
     return "bowl";
   } else return "bat";
 }
-
+document.querySelector(".continue").addEventListener("click", function () {
+  open("./index2.html","_parent");
+})
 // end of toss section
