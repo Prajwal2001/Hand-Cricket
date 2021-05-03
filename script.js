@@ -2,9 +2,8 @@ var isTossOver = 0; //to determine whether toss is over or not (if 0 toss not do
 var clickedHeadsOrTails; //to get what user has clicked (1 for heads 0 for tails)
 var computersChoiceBatOrBowl; //if toss is lost by user then what is the choice of the computer (bat or bowl)
 var tossResult;
+var x = 100;
 // var battingFirst = 100;
-localStorage.setItem("clickedHeadsOrTails",clickedHeadsOrTails);
-localStorage.setItem("tossResult",tossResult);
 document.querySelector(".heads").addEventListener("click", function () {
   clickedHeadsOrTails = 1;
   tossDisplay();
@@ -36,11 +35,13 @@ function tossResultDisplay() {
 function lostResultContent() {
   //function to display computer's choice (bat or bowl)
   computersChoiceBatOrBowl = Math.round(Math.random());
+  localStorage.setItem("tossResult", tossResult);
+  localStorage.setItem("x",x);
   if (computersChoiceBatOrBowl === 0) {
     return "bowl";
   } else return "bat";
 }
 document.querySelector(".continue").addEventListener("click", function () {
-  open("./index2.html","_parent");
-})
+  open("./index2.html", "_parent");
+});
 // end of toss section

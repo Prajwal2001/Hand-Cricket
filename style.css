@@ -128,3 +128,9 @@ h1 {
     height: 100px;
     width: 100px;
 }
+.out {
+    display: none;
+}
+#nextinningscontinue {
+    display: none;
+}
