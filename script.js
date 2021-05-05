@@ -202,11 +202,26 @@ function onGettingOut() {
       document.querySelector(".target").style.display = "block";
   });
   score = 0;
+} else {
+  document.querySelector(".numbers").style.display = "none";
+  document.querySelector(".result").style.display = "block";
+  if(score == target-1) {
+    document.querySelector(".result").innerHTML = "Draw";
+  } else {
+    document.querySelector(".result").innerHTML = "Lost by " + (target - score - 1) + " runs";
+  }
 }
 }
 
 function showScore() {
-  document.querySelector(".scorecard").innerHTML = "Score: " + score;
+  if(firstBatting == 0) {
+    if(score >= target) {
+      document.querySelector(".numbers").style.display = "none";
+      document.querySelector(".result").style.display = "block";
+      document.querySelector(".result").innerHTML = "Won";
+    }
+  } document.querySelector(".scorecard").innerHTML = "Score: " + score;
+  
 }
 
 // End of batting
@@ -296,11 +311,26 @@ function onTakingWicket() {
       document.querySelector("#target").innerHTML = "Target: " + target;
       document.querySelector("#target").style.display = "block";
     });
+  } else {
+    document.querySelector("#numbers").style.display = "none";
+    document.querySelector(".result").style.display = "block";
+    if(score == target-1) {
+      document.querySelector(".result").innerHTML = "Draw";
+    } else {
+      document.querySelector(".result").innerHTML = "Won by " + (target - score - 1) + " runs";
+    }
   }
   score = 0;
 }
 
 function showScoreBowling() {
+  if(firstBatting == 1) {
+    if(score >= target) {
+      document.querySelector("#numbers").style.display = "none";
+      document.querySelector(".result").style.display = "block";
+      document.querySelector(".result").innerHTML = "Lost";
+    }
+  }
   document.querySelector("#scorecard").innerHTML = "Score: " + score;
 }
 
