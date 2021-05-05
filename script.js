@@ -191,10 +191,18 @@ function oppoImageBowling() {
 
 function onGettingOut() {
   document.querySelector(".out").style.display = "block";
-  document.querySelector(".numbers").style.visibility = "hidden";
-  document.querySelector("#nextinningscontinue").style.display = "block";
-  target = score;
+  document.querySelector(".numbers").style.display = "none";
+  if (firstBatting == 1) {
+    document.querySelector("#nextinningscontinue").style.display = "inline-block";
+    target = score + 1;
+    document.querySelector("#nextinningscontinue").addEventListener("click", function() {
+      document.querySelector(".batting").style.display = "none";
+      document.querySelector(".bowling").style.display = "block";
+      document.querySelector(".target").innerHTML = "Target: " + target;
+      document.querySelector(".target").style.display = "block";
+  });
   score = 0;
+}
 }
 
 function showScore() {
@@ -278,12 +286,21 @@ function oppoImageBatting() {
 
 function onTakingWicket() {
   document.querySelector("#out").style.display = "block";
-  document.querySelector("#numbers").style.visibility = "hidden";
-  document.querySelector(".continueBowling").style.display = "inline-block";
-  target = score;
+  document.querySelector("#numbers").style.display = "none";
+  if (firstBatting == 0) {
+    document.querySelector(".continueBowling").style.display = "inline-block";
+    target = score + 1;
+    document.querySelector(".continueBowling").addEventListener("click", function() {
+      document.querySelector(".batting").style.display = "block";
+      document.querySelector(".bowling").style.display = "none";
+      document.querySelector("#target").innerHTML = "Target: " + target;
+      document.querySelector("#target").style.display = "block";
+    });
+  }
   score = 0;
 }
 
 function showScoreBowling() {
   document.querySelector("#scorecard").innerHTML = "Score: " + score;
 }
+
