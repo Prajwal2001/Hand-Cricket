@@ -67,10 +67,13 @@ h1 {
 .batting {
     display: none;
 }
+#target {
+    display: none;
+}
 .numbers {
     margin-top: 50px;
 }
-.numbers a, .one {
+.one {
     text-decoration: none;
     color: white;
     margin-left: 20px;
@@ -79,7 +82,7 @@ h1 {
     text-align: center;
     border-radius: 15%;
 }
-.numbers a:hover, .one:hover{
+.one:hover{
     background-color: white;
     color:rgb(5, 6, 71);
     cursor: pointer;
@@ -138,8 +141,14 @@ h1 {
 
 
 
-/* first bowl */
+/* bowl */
 .bowling {
     margin-top: 50px;
+    display: none;
+}
+.continueBowling {
+    display: none;
+}
+.target {
     display: none;
 }

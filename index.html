@@ -79,9 +79,10 @@
 
 
     <div class="batting">
+      <div id="target"></div>
       <div class="numbers">
         <div class="entercontent">
-          <div class="batting">Enter the batting number</div>
+          <div>Enter the batting number</div>
         </div>
         <span class="firsthalf">
           <span class="one">1 </span>
@@ -108,9 +109,9 @@
       </div>
       <div class="scorecard">Score:</div>
       <div class="out">
-        <p>Batsman out!</p>
+        <p>OUT!</p>
       </div>
-      <div class="continue" id="nextinningscontinue">
+      <div id="nextinningscontinue">
         <button type="button" class="btn btn-light continuetonextinnings">
           continue
         </button>
@@ -123,44 +124,47 @@
 
 
 
-    <div class="bowling">
-      <div class="numbers1">
-        <div class="entercontent">
-          <div class="batting">Enter the bowling number</div>
+    <div class="bowling" id="bowling">
+      <div class="target"></div>
+      <div class="numbers" id="numbers">
+        <div class="entercontent" id="entercontent">
+          <div>Enter the bowling number</div>
         </div>
-        <span class="firsthalf">
-          <span class="one">1 </span>
-          <span class="one two">2 </span>
-          <span class="one three">3 </span>
-          <span class="one four">4 </span>
-          <span class="one five">5 </span>
+        <span class="firsthalf" id="firsthalf">
+          <span class="one" id="one">1 </span>
+          <span class="one two" id="two">2 </span>
+          <span class="one three" id="three">3 </span>
+          <span class="one four" id="four">4 </span>
+          <span class="one five" id="five">5 </span>
         </span>
-        <span class="secondhalf">
-          <span class="one six">6 </span>
-          <span class="one seven">7 </span>
-          <span class="one eight">8 </span>
-          <span class="one nine">9 </span>
-          <span class="one ten">10 </span>
+        <span class="secondhalf" id="secondhalf">
+          <span class="one six" id="six">6 </span>
+          <span class="one seven" id="seven">7 </span>
+          <span class="one eight" id="eight">8 </span>
+          <span class="one nine" id="nine">9 </span>
+          <span class="one ten" id="ten">10 </span>
         </span>
       </div>
-      <div class="names">
-        <span class="you">You</span>
-        <span class="comp">Computer</span>
+      <div class="names" id="names">
+        <span class="you" id="you">You</span>
+        <span class="comp" id="comp">Computer</span>
       </div>
-      <div class="scoreimages">
-        <span class="yourscore"></span>
-        <span class="opponentscore"></span>
+      <div class="scoreimages" id="scoreimages">
+        <span class="yourscore" id="yourscore"></span>
+        <span class="opponentscore" id="opponentscore"></span>
       </div>
-      <div class="scorecard1">Score:</div>
-      <div class="out">
-        <p>Batsman out!</p>
+      <div class="scorecard" id="scorecard">Score:</div>
+      <div class="out" id="out">
+        <p>OUT!</p>
       </div>
-      <div class="continue" id="nextinningscontinue">
-        <button type="button" class="btn btn-light continuetonextinnings">
+      <div class="continue" id="bowlingcontinue">
+        <button type="button" class="btn btn-light continuetonextinnings continueBowling" id="continuetonextinnings">
           continue
         </button>
       </div>
     </div>
+
+
 
 
     <!-- End of bowling -->

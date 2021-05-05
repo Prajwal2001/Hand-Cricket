@@ -5,6 +5,11 @@ var tossResult; //Tells whether toss result was heads or tails
 var firstBatting;
 var firstBowling;
 var score = 0;
+var computerValue;
+var i = 0;
+var bowlingValue;
+var target = 0;
+showScore();
 // var battingFirst = 100;
 document.querySelector(".heads").addEventListener("click", function () {
   clickedHeadsOrTails = 1;
@@ -51,29 +56,24 @@ document.querySelector(".continue").addEventListener("click", function () {
   else document.querySelector(".bowling").style.display = "block";
   document.querySelector(".toss").style.display = "none";
 });
-document.querySelector(".bat").addEventListener("click",function() {
+document.querySelector(".bat").addEventListener("click", function () {
   firstBatting = 1;
   document.querySelector(".batting").style.display = "block";
   document.querySelector(".toss").style.display = "none";
 });
-document.querySelector(".bowl").addEventListener("click",function() {
+document.querySelector(".bowl").addEventListener("click", function () {
   firstBatting = 0;
   document.querySelector(".bowling").style.display = "block";
   document.querySelector(".toss").style.display = "none";
 });
 
-
 // end of toss section
 
-
-
-
-showScore();
-var computerValue = null;
+computerValue = null;
 document.querySelector(".one").addEventListener("click", function () {
   document.querySelector(".yourscore").innerHTML =
     "<img src = Images/image-1.jpg>";
-  oppoImage();
+  oppoImageBowling();
   if (computerValue !== 1) {
     score += 1;
     showScore();
@@ -84,7 +84,7 @@ document.querySelector(".one").addEventListener("click", function () {
 document.querySelector(".two").addEventListener("click", function () {
   document.querySelector(".yourscore").innerHTML =
     "<img src = Images/image-2.jpg>";
-  oppoImage();
+  oppoImageBowling();
   if (computerValue !== 2) {
     score += 2;
     showScore();
@@ -95,7 +95,7 @@ document.querySelector(".two").addEventListener("click", function () {
 document.querySelector(".three").addEventListener("click", function () {
   document.querySelector(".yourscore").innerHTML =
     "<img src = Images/image-3.jpg>";
-  oppoImage();
+  oppoImageBowling();
   if (computerValue !== 3) {
     score += 3;
     showScore();
@@ -106,7 +106,7 @@ document.querySelector(".three").addEventListener("click", function () {
 document.querySelector(".four").addEventListener("click", function () {
   document.querySelector(".yourscore").innerHTML =
     "<img src = Images/image-4.jpg>";
-  oppoImage();
+  oppoImageBowling();
   if (computerValue !== 4) {
     score += 4;
     showScore();
@@ -117,7 +117,7 @@ document.querySelector(".four").addEventListener("click", function () {
 document.querySelector(".five").addEventListener("click", function () {
   document.querySelector(".yourscore").innerHTML =
     "<img src = Images/image-5.jpg>";
-  oppoImage();
+  oppoImageBowling();
   if (computerValue !== 5) {
     score += 5;
     showScore();
@@ -128,7 +128,7 @@ document.querySelector(".five").addEventListener("click", function () {
 document.querySelector(".six").addEventListener("click", function () {
   document.querySelector(".yourscore").innerHTML =
     "<img src = Images/image-6.jpg>";
-  oppoImage();
+  oppoImageBowling();
   if (computerValue !== 6) {
     score += 6;
     showScore();
@@ -139,7 +139,7 @@ document.querySelector(".six").addEventListener("click", function () {
 document.querySelector(".seven").addEventListener("click", function () {
   document.querySelector(".yourscore").innerHTML =
     "<img src = Images/image-7.jpg>";
-  oppoImage();
+  oppoImageBowling();
   if (computerValue !== 7) {
     score += 7;
     showScore();
@@ -150,7 +150,7 @@ document.querySelector(".seven").addEventListener("click", function () {
 document.querySelector(".eight").addEventListener("click", function () {
   document.querySelector(".yourscore").innerHTML =
     "<img src = Images/image-8.jpg>";
-  oppoImage();
+  oppoImageBowling();
   if (computerValue !== 8) {
     score += 8;
     showScore();
@@ -161,7 +161,7 @@ document.querySelector(".eight").addEventListener("click", function () {
 document.querySelector(".nine").addEventListener("click", function () {
   document.querySelector(".yourscore").innerHTML =
     "<img src = Images/image-9.jpg>";
-  oppoImage();
+  oppoImageBowling();
   if (computerValue !== 9) {
     score += 9;
     showScore();
@@ -169,10 +169,11 @@ document.querySelector(".nine").addEventListener("click", function () {
     onGettingOut();
   }
 });
+
 document.querySelector(".ten").addEventListener("click", function () {
   document.querySelector(".yourscore").innerHTML =
     "<img src = Images/image-10.jpg>";
-  oppoImage();
+  oppoImageBowling();
   if (computerValue !== 10) {
     score += 10;
     showScore();
@@ -180,17 +181,109 @@ document.querySelector(".ten").addEventListener("click", function () {
     onGettingOut();
   }
 });
-function oppoImage() {
+
+function oppoImageBowling() {
   var i = Math.floor(Math.random() * 10 + 1);
   document.querySelector(".opponentscore").innerHTML =
     '<img src = "Images/image-' + i + '.jpg">';
   computerValue = i;
 }
+
 function onGettingOut() {
   document.querySelector(".out").style.display = "block";
   document.querySelector(".numbers").style.visibility = "hidden";
   document.querySelector("#nextinningscontinue").style.display = "block";
+  target = score;
+  score = 0;
 }
+
 function showScore() {
   document.querySelector(".scorecard").innerHTML = "Score: " + score;
+}
+
+// End of batting
+
+showScoreBowling();
+document.getElementById("one").addEventListener("click", function () {
+  bowlingValue = 1;
+  document.querySelector("#yourscore").innerHTML =
+    "<img src = Images/image-1.jpg>";
+  oppoImageBatting();
+});
+document.getElementById("two").addEventListener("click", function () {
+  bowlingValue = 2;
+  document.querySelector("#yourscore").innerHTML =
+    "<img src = Images/image-2.jpg>";
+  oppoImageBatting();
+});
+document.getElementById("three").addEventListener("click", function () {
+  bowlingValue = 3;
+  document.querySelector("#yourscore").innerHTML =
+    "<img src = Images/image-3.jpg>";
+  oppoImageBatting();
+});
+document.getElementById("four").addEventListener("click", function () {
+  bowlingValue = 4;
+  document.querySelector("#yourscore").innerHTML =
+    "<img src = Images/image-4.jpg>";
+  oppoImageBatting();
+});
+document.getElementById("five").addEventListener("click", function () {
+  bowlingValue = 5;
+  document.querySelector("#yourscore").innerHTML =
+    "<img src = Images/image-5.jpg>";
+  oppoImageBatting();
+});
+document.getElementById("six").addEventListener("click", function () {
+  bowlingValue = 6;
+  document.querySelector("#yourscore").innerHTML =
+    "<img src = Images/image-6.jpg>";
+  oppoImageBatting();
+});
+document.getElementById("seven").addEventListener("click", function () {
+  bowlingValue = 7;
+  document.querySelector("#yourscore").innerHTML =
+    "<img src = Images/image-7.jpg>";
+  oppoImageBatting();
+});
+document.getElementById("eight").addEventListener("click", function () {
+  bowlingValue = 8;
+  document.querySelector("#yourscore").innerHTML =
+    "<img src = Images/image-8.jpg>";
+  oppoImageBatting();
+});
+document.getElementById("nine").addEventListener("click", function () {
+  bowlingValue = 9;
+  document.querySelector("#yourscore").innerHTML =
+    "<img src = Images/image-9.jpg>";
+  oppoImageBatting();
+});
+document.getElementById("ten").addEventListener("click", function () {
+  bowlingValue = 10;
+  document.querySelector("#yourscore").innerHTML =
+    "<img src = Images/image-10.jpg>";
+  oppoImageBatting();
+});
+
+function oppoImageBatting() {
+  i = Math.floor(Math.random() * 10 + 1);
+  document.querySelector("#opponentscore").innerHTML =
+    '<img src = "Images/image-' + i + '.jpg">';
+  if (i == bowlingValue) onTakingWicket();
+  else {
+    score += i;
+    showScoreBowling();
+  }
+}
+
+function onTakingWicket() {
+  document.querySelector("#out").style.display = "block";
+  document.querySelector("#numbers").style.visibility = "hidden";
+  document.querySelector(".continueBowling").style.display = "inline-block";
+  target = score;
+  score = 0;
+}
+
+function showScoreBowling() {
+  document.querySelector("#scorecard").innerHTML = "Score: " + score;
 }
